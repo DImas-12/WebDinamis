@@ -5,8 +5,9 @@ import { MobileComponent } from './mobile/mobile.component';
 import { WebComponent } from './web/web.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
     data: {
       title: 'Home',
