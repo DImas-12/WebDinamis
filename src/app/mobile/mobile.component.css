@@ -1,0 +1,73 @@
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body {
+  background-color: white !important;
+  color: black;
+}
+.Container1 {
+  background-color: #7879f1;
+  width: 50% !important;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container2 {
+  width: 50% !important;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Button {
+  background-color: white;
+  border: 2px solid black;
+  width: 32%;
+  height: 50px;
+  border-radius: 10px;
+  color: black;
+}
+.ButtonLogin {
+  width: 30%;
+  height: 50px;
+  color: white;
+  border-radius: 10px;
+}
+.ColorLogin {
+  background-color: #7879f1;
+}
+.ColorNotLogin {
+  background-color: gray;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+.iconEye {
+  width: 10%;
+  height: 30px !important;
+  color: black;
+  cursor: pointer;
+  margin-left: -40px !important;
+}

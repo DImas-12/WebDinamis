@@ -1,0 +1,120 @@
+<div style="display: flex; flex-direction: row">
+  <div class="Container1">
+    <div
+      style="
+        background-color: #aeaff7;
+        width: 85%;
+        height: 65%;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+      "
+    >
+      <div style="width: 90%; text-align: left; height: 100%">
+        <label style="color: white; font-size: 50px">
+          Lorem ipsum dolor si amet
+        </label>
+        <br />
+        <label style="font-size: 50px; color: black"> consectetur </label>
+
+        <p style="color: black; margin-top: 20px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container2">
+    <div style="width: 70%; padding: 20px">
+      <div style="margin-bottom: 30px">
+        <h2>HELLO</h2>
+        <label>Enter your email and password to login.</label>
+      </div>
+      <form>
+        <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            placeholder="Placeholder"
+            [(ngModel)]="FromLogin.email"
+            name="email"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            [(ngModel)]="FromLogin.password"
+            name="password"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+      </form>
+      <div style="display: flex; justify-content: space-between">
+        <div>
+          <input type="checkbox" />
+          <label>Remember Me</label>
+        </div>
+        <label style="text-decoration: underline"> Forgot Password? </label>
+      </div>
+      <div style="display: flex; justify-content: space-between">
+        <button
+          style="cursor: pointer; background-color: gray"
+          class="ButtonLogin ColorLogin"
+          *ngIf="!FromLogin.email"
+        >
+          Login
+        </button>
+        <button
+          style="cursor: pointer; background-color: #7879f1"
+          class="ButtonLogin ColorLogin"
+          (click)="Login()"
+          *ngIf="FromLogin.email"
+        >
+          Login
+        </button>
+      </div>
+
+      <div>
+        <label
+          style="display: flex; justify-content: center; margin-bottom: 20px"
+        >
+          Or, login with
+        </label>
+
+        <div style="display: flex; justify-content: center; gap: 20px">
+          <!-- <button mat-raised-button>Facebook</button>
+          <button mat-raised-button>Linked In</button>
+          <button mat-raised-button>Google</button> -->
+          <button
+            class="ButtonLogin"
+            style="cursor: pointer; background-color: white; color: black"
+          >
+            Facebook
+          </button>
+          <button
+            class="ButtonLogin"
+            style="cursor: pointer; background-color: white; color: black"
+          >
+            Linked In
+          </button>
+          <button
+            class="ButtonLogin"
+            style="cursor: pointer; background-color: white; color: black"
+          >
+            Google
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
